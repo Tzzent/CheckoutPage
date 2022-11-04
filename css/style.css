@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+    /* background-color: aquamarine; */
+    margin: 30px 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    margin-bottom: 1em;
+}
+
+
+.card {
+    border-radius: 15px;
+    padding: 2em;
+    background-color: rgb(242, 242, 242);
+    width: auto;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, auto));
+    grid-auto-rows: 200px;
+    gap: 2em;
+}
+
+.product img {
+    width: auto;
+    border-radius: 15px;
+}
+
+.product {
+    display: flex;
+    gap: 2em;
+}
+
+.about-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description-product .title-product {
+    margin-bottom: 15px;
+}
+
+.about-product .price {
+    gap: 20px;
+}
+
+.about-product .price p {
+    font-size: .9rem;
+    text-decoration: line-through;
+}
+
+.about-product .quantity {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px 5px;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.about-product .quantity span {
+    background-color: #E0E0E0;
+    color: gray;
+    cursor: pointer;
+}
+
+.quantity p {
+    font-size: 1.2rem;
+}
+
+.description-product .price {
+    display: flex;
+}
+
+.price span {
+    color: orange;
+}
+
+.quantity {
+    display: flex;
+    width: 200px;
+}
+
+/* Amount */
+.amount {
+    margin-top: 3em;
+}
+
+.amount-total {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid rgb(198, 198, 198);
+    padding: 15px 0px;
+}
+
+
+/* Form Contact */
+
+.form-contact h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.input-text span {
+    position: absolute;
+    padding: 13px 10px;
+    font-size: 1.3rem;
+}
+
+.input-text input {
+    width: 100%;
+    border-style: none;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 15px 35px;
+    margin-bottom: 1.2em;
+}
+
+.input-text {
+    margin-top: .2em;
+}
+
+.name {
+    margin-bottom: .2em;
+}
+
+/* Country and Postal */
+
+.country {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.country label {
+    display: inline-block;
+}
+
+/* Save Information */
+
+.save-info span {
+    position: absolute;
+    cursor: pointer;
+}
+
+.save-info label {
+    padding-left: 10px;
+}
+
+.save-info input {
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+/* Button */
+
+.btnContinue {
+    display: flex;
+    margin-top: 2em;
+    justify-content: end;
+}
+
+.btnContinue button {
+    border-style: none;
+    border-radius: 10px;
+    width: 50%;
+    height: 60px;
+    background-color: orange;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btnContinue button:hover {
+    background-color: rgb(61, 137, 61);
+}
+
+
+/* Credit */
+.credit {
+    text-align: center;
+    margin-top: 80px;
+    color: gray;
+}
+
+.credit a {
+    text-decoration: none;
+    color: gray;
+}
+
+.credit a:hover {
+    color: orange;
+}
+
+
+
+/* Media Querys MAX */
+
+@media (max-width: 580px) {
+
+    .product {
+        display: block;
+    }
+
+    .products {
+        grid-template-columns: repeat(1, auto);
+        grid-auto-rows: auto;
+    }
+
+    .description-product {
+        margin-top: 30px;
+    }
+
+    .quantity {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Media Querys Min */
+@media (min-width: 1400px) {
+    .main {
+        position: relative;
+        margin: 80px 350px;
+    }
+
+
+
+}
+
+@media (min-width: 1800px) {
+    .card {
+        position: absolute;
+        right: 0;
+        width: 40%;
+        height: 55%;
+    }
+
+    .products {
+        grid-auto-rows: 150px;
+    }
+
+    .form-contact {
+        width: 40%;
+    }
+
+}
